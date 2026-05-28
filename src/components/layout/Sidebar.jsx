@@ -30,7 +30,7 @@ export default function Sidebar() {
 
   return (
     <div className="w-56 min-w-[224px] bg-slate-900 flex flex-col h-screen sticky top-0">
-      {/* Logo */}
+      {/* Logo -*/}
       <div className="px-4 py-5 border-b border-white/8">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 bg-indigo-500 rounded-lg flex items-center justify-center">
