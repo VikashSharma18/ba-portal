@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f8f9fc;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+}
+
+@layer components {
+  .sidebar-item {
+    @apply flex items-center gap-3 px-3 py-2 rounded-lg text-sm cursor-pointer transition-all duration-150 text-slate-400 hover:text-slate-200 hover:bg-white/5;
+  }
+  .sidebar-item.active {
+    @apply bg-indigo-500 text-white;
+  }
+  .btn-primary {
+    @apply flex items-center gap-2 px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-medium rounded-lg transition-colors;
+  }
+  .btn-secondary {
+    @apply flex items-center gap-2 px-3 py-2 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 text-sm font-medium rounded-lg transition-colors;
+  }
+  .card {
+    @apply bg-white border border-slate-200/80 rounded-xl;
+  }
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+  .badge-critical { @apply bg-red-50 text-red-700; }
+  .badge-high { @apply bg-amber-50 text-amber-700; }
+  .badge-medium { @apply bg-blue-50 text-blue-700; }
+  .badge-low { @apply bg-slate-100 text-slate-600; }
+  .status-pill {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium;
+  }
+  .role-badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium;
+  }
+  .input {
+    @apply w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-400 bg-white;
+  }
+  .select {
+    @apply w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-400 bg-white;
+  }
+  .label {
+    @apply block text-xs font-medium text-slate-600 mb-1.5;
+  }
+}
